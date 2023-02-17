@@ -2,7 +2,7 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
+      source  = "hashicorp/azure"
       
     }
   }
@@ -11,13 +11,13 @@ terraform {
 # Provider Block
 provider "aws" {
   profile = "default" 
-  region  = "ap-sydney-1"
+  region  = "us-cntral"
 }
 
 #Resource Block
 resource "aws_instance" "rdpserver" {
   ami           = "ami-041db4a969fe3eb68" 
-  instance_type = "t4.medium "
+  instance_type = "b2S "
 
 }
 
